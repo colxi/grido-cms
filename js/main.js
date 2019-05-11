@@ -8,13 +8,13 @@ import { Filters } from './filters.js';
 
 
 async function loadTemplate(){
-    let head = await ( await fetch('./content/theme/html/head.html') ).text();
+    let head = await ( await fetch('./content/theme/html/head.htm') ).text();
     document.head.innerHTML += head;
 
-    let sidebarTop = await ( await fetch('./content/theme/html/sidebar-top.html') ).text();
+    let sidebarTop = await ( await fetch('./content/theme/html/sidebar-top.htm') ).text();
     document.getElementById('sidebarTop').innerHTML = sidebarTop;
 
-    let sidebarBottom = await ( await fetch('./content/theme/html/sidebar-bottom.html') ).text();
+    let sidebarBottom = await ( await fetch('./content/theme/html/sidebar-bottom.htm') ).text();
     document.getElementById('sidebarBottom').innerHTML = sidebarBottom;
 
 }

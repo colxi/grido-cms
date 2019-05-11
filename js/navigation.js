@@ -36,7 +36,7 @@ async function loadProject(uri){
     document.body.setAttribute('projectView', true);
 
     // fetch project description HTML
-    let html = await (await fetch(`./content/projects/${uri}/index.html`) ).text();
+    let html = await (await fetch(`./content/projects/${uri}/index.htm`) ).text();
     // insert HTML
     GUI.projectContent.innerHTML= html;
     // make script elements to execute (they are not executed when 

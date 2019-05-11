@@ -39,10 +39,10 @@ The base path for placing the contents is the `/content/` directory. In the foll
 ..... projects/ 
 .......... my-project/
 ............... thumbnail.jpg
-............... index.html
+............... index.htm
 .......... another-project/
 ............... thumbnail.jpg
-............... index.html
+............... index.htm
 ............... some-image.jpg
 
 ```
@@ -81,13 +81,13 @@ This other mandatory file contains the collection of projects you want to be lis
 
 > /content/projects/
 
-This directory behaves as your **projects collection container** . Must contains a nested directory for each project, and its name must match with the URIs declared in `projects.json.js`. Inside each project directory should be placed all its related material, but is expected for each project to have an **index.html** file and a **thumbnail.jpg** file. 
+This directory behaves as your **projects collection container** . Must contains a nested directory for each project, and its name must match with the URIs declared in `projects.json.js`. Inside each project directory should be placed all its related material, but is expected for each project to have an **index.htm** file and a **thumbnail.jpg** file. 
 
 > /content/projects/my-project/thumbnail.jpg
 
 A mandatory image of 300pxx300px (recomended). Is used in the cards, in the projects listing.
 
-> /content/projects/my-project/index.html
+> /content/projects/my-project/index.htm
 
 This file contains the extended contents of the project. The HTML code contained in this file will be printed in the floating panel that appears when a card is clicked. 
 
