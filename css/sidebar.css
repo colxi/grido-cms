@@ -1,0 +1,22 @@
+
+#sidebarFixedContainer{
+    /* z-index: 1000; */
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    width: 100px;
+    text-align: center;
+    padding-top: 20px;
+    background: var(--primary-color);
+}
+
+#sidebarBottom{    
+    position: absolute;
+    bottom: 20px;
+    width:100%;
+}
+
+#sidebarBottom>span{
+    margin-top:5px;
+    display: inline-block;
+}

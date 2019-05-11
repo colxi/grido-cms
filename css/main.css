@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url("./filter.css");
+@import url("./card.css");
+@import url("./sidebar.css");
+@import url("./project.css");
+
+
+:root{
+    /* declaration of some CSS3 global variables */
+    --cardSize : 237;
+    
+    --primary-color-light   : #f7624e;
+    --primary-color         : #f33e25;
+    --primary-color-dark    : #bb2d1a;
+
+    --secondary-color-light : #e7e7e7;
+    --secondary-color       : #b7b7b7;
+    --secondary-color-dark  : #676767;
+}
+
+body{ 
+    overflow-x  : hidden;
+    overflow-y  : scroll;
+    padding     : 0px;
+    margin      : 0px;
+    background  : var(--secondary-color-dark);
+    font-family: 'Open Sans';
+    font-size: 14px;
+}
+
+body[projectView]{
+    overflow-y: hidden !important;
+}
+
+#globalContainer{
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 100px auto;
+    position: absolute;
+    width:100%;
+}
+
+a{
+    text-decoration:none;
+    color: black;
+}
+
+.columns-3{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+
+
+@media screen and (max-width: 800px) {
+    #sidebarBottom>span.linkNpm img{ margin-bottom: 5px; }
+
+
+    #globalContainer{
+        grid-template-columns: none;
+        grid-template-rows: 60px 1fr;
+    }
+
+    #sidebarFixedContainer{
+        width: 100%;
+        height: 60px;
+        padding-top: 0px;
+        z-index: 9999;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    #sidebarTop{
+        padding: 14px;
+        bottom: inherit;
+        top: 0px;
+        grid-column: 1/2;
+        left: 0px;
+        position: absolute;
+    }
+
+    #sidebarBottom{
+        padding: 10px;
+        bottom: inherit;
+        top: 0px;
+        grid-column: 2/3;
+        position: absolute;
+        right: 0px;
+        text-align:right;
+    }
+    #sidebarBottom>span{
+        margin:5px;
+    }
+    
+    #projectContainer{
+        width: 100vw;
+        margin-left: 0px;
+        top: 60px;
+    }
+
+    #filterButton{
+        top: 80px;
+    }
+
+    #filterCategoriesList {
+        top: 160px;
+    }
+
+    #projectColumns {
+        grid-template-columns: 100%;
+    }
+
+    #projectContainer content {
+        margin: 60px 40px;
+        padding-bottom: 60px;
+    }
+
+    #projectFirstColumn {
+        padding-right: 0px;
+        grid-row: 2/3;
+    }
+
+    #projectSecondColumn{
+        margin-bottom: 40px;
+        grid-row: 1/2;
+    }
+
+    .columns-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .secondColumnImage {
+        grid-column: 1/2;
+    }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "grido.cms",
+  "version": "1.0.4",
+  "homepage": "https://github.com/colxi/grido-cms",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/colxi/grido-cms.git"
+  },
+  "keywords": [
+    "flat-file cms",
+    "portfolio cms",
+    "cms"
+  ],
+  "description": "Grido-CMS is a minimal **flat-file content management system** for portfolios, and other tiled listings.",
+  "main": "grido-cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "MIT",
+  "author": "colxi"
+}
