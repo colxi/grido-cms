@@ -21,7 +21,7 @@ Can be used as a boilerplate to build on top more complex system, or be used as 
 The minimal UI provides a **scrollable listing**, based in a **grid** of responsive **cards**. If any of the list members is clicked, an **extended view** of the item pops in the screen.
 A simple fixed **sidebar**, allows some extra contents to be placed (logo, links, menu...), and a floating **Filtering button** lets the user delimit the contents of the card listing, by **category**.
 
-> Check the online demostration [here](jjjjjjjjjj).
+> Check the online demostration [here](https://colxi.info/grido-cms).
 
 
 # Content management
