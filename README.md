@@ -145,7 +145,7 @@ In the following example a simple structure that exposes all them is shown. Just
 $ npm install grido-cms -s
 ```
 
-**Git** : Clone from Github...
+**Git** : Clone from Github... (Or download the latest release [here](https://github.com/colxi/grido-cms/releases/latest))
 ```
 $ git clone https://github.com/colxi/grido-cms
 ```
