@@ -2,14 +2,18 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="./css/main.css" >
+        <link rel="stylesheet" type="text/css" href="./grido-core/css/main.css" >
         <title>Colxi : Portfolio</title>
-        <link rel="icon" href="./content/theme/img/favicon.ico">
-        <script type="module" src="./js/main.js"></script>
-        <link rel="stylesheet" type="text/css" href="./content/theme/css/styles.css" >
+        <link rel="icon" href="./grido-content/theme/img/favicon.ico">
+        <script type="module" src="./grido-core/js/main.js"></script>
+        <link rel="stylesheet" type="text/css" href="./grido-content/theme/css/styles.css" >
         <!--here content of /content/theme/html/head.htm -->
     </head>
     <body>
+        <template id="htmlLoader">
+            <!-- Used to extract SCRIPT elements from loaded content and inject them
+                 and grant their execution. (<element>.innerHTML does not execute scripts) -->    
+        </template>
         <id id="projectContainer" folded>
             <content id="projectContent">
                 <!-- PROJECT BODY generated from the selected project from /content/projects/[project-name]/index.htm -->

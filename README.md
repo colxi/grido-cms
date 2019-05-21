@@ -1,6 +1,6 @@
 # Grido-CMS : Responsive Flat-File CMS 
 
-Grido-CMS is a minimal **flat-file content management system** for portfolios, and other tiled listings, implemented using just Javascript , HTML and CSS. 
+Grido-CMS is a minimal **flat-file content management system** for portfolios, and other tiled listings, implemented in  Javascript , HTML and CSS, with a customizable fluid and responsive layout.
 
 The scope and purpose of Grido-CMS are very specific : it aims to provide a modern, lightweight, dependency free and crossdevice system for managing contents, but specialy an intuitive and agile enviroment for both, developers and users.
 
@@ -8,7 +8,7 @@ Can be used as a boilerplate to build on top more complex system, or be used as 
 
 
 ## Features :
-- Intuitive UI (Modern and minimal) 
+- Intuitive fluid UI (Modern and minimal) 
 - No dependencies (Tiny & light)
 - No database (100% file based)
 - Responsive (Desktop+devices)

@@ -1,0 +1,51 @@
+/* 
+GLOBAL CSS variables
+---------------------------------------------
+This variables will define the size of the 
+cards in the listing, and the color palette
+used by the UI 
+*/
+:root{
+
+    /* Maximum size of each individual card */
+    --card-size : 237; /* px */
+
+    /* UI color palette*/
+    --primary-color-light   : #f7624e;
+    --primary-color         : #f33e25;
+    --primary-color-dark    : #bb2d1a;
+
+    --secondary-color-light : #e7e7e7;
+    --secondary-color       : #b7b7b7;
+    --secondary-color-dark  : #676767;
+
+}
+
+
+/* 
+Theme Custom styles 
+----------------------------------------------------
+Place here the styles you want to customize, and the
+Grido CMS native styles will be overwrtitten 
+*/
+#sidebarBottom{
+    display: grid;
+}
+
+#sidebarBottom>a{
+    margin-top:5px;
+}
+
+
+/* 
+Styles for the mobile view. 
+-----------------------------------------------------
+The mobile breakpoint in Grido CMS is set at 800px. 
+To change this value, all the @media queries in the 
+core files must be modified manually. 
+*/
+@media screen and (max-width: 800px){
+    #sidebarBottom{ display: block; }
+
+    #sidebarBottom>a{ margin-left: 8px; }
+}
