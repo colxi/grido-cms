@@ -38,17 +38,7 @@ async function loadProject(uri){
     // fetch project description HTML
     let html = await (await fetch(`./grido-content/projects/${uri}/index.htm`) ).text();
     // insert HTML
-    GUI.projectContent.innerHTML= html;
-    // make script elements to execute (they are not executed when 
-    // inserted using innerHTML )
-    let scripts = GUI.projectContent.getElementsByTagName('script');
-    for( let i=0; i<scripts.length; i++){
-        let script = document.createElement('script');
-        script.type = scripts[i].type;
-        script.innerHTML = scripts[i].innerHTML;
-        GUI.projectContent.head.appendChild(script);
-        GUI.projectContent.head.removeChild(script);
-    }
+    GUI.insertHTML(html, GUI.projectContent )
 }
 
 

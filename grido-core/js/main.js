@@ -9,30 +9,15 @@ import { Filters } from './filters.js';
 
 async function loadTemplate(){
     let head = await ( await fetch('./grido-content/theme/html/head.htm') ).text();
-    // inject i template, extract all the elements, and one by one, inject them in
-    // the head using appendChilkdor replacechild
-
-    GUI.htmlLoader.innerHTML += head;
-    // force scripts in the imported head to execute! 
-    let scripts = GUI.htmlLoader.content.querySelectorAll('script');
-    for( let i=0; i< scripts.length; i++){
-        console.log( scripts[i])
-        let script = document.createElement('script');
-        script.type = scripts[i].type || 'text/javascript';
-        if( scripts[i].hasAttribute('src') ) script.src = scripts[i].src;
-        script.innerHTML = scripts[i].innerHTML;
-        document.head.appendChild(script);
-        document.head.removeChild(script);
-    }
-
+    GUI.insertHTML(head, document.head, true);
 
     let sidebarTop = await ( await fetch('./grido-content/theme/html/sidebar-top.htm') ).text();
-    document.getElementById('sidebarTop').innerHTML = sidebarTop;
-
+    GUI.insertHTML(sidebarTop, document.getElementById('sidebarTop'));
+    
     let sidebarBottom = await ( await fetch('./grido-content/theme/html/sidebar-bottom.htm') ).text();
-    document.getElementById('sidebarBottom').innerHTML = sidebarBottom;
-
+    GUI.insertHTML(sidebarBottom, document.getElementById('sidebarBottom'));
 }
+
 loadTemplate();
 
 

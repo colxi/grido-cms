@@ -30,10 +30,10 @@ Because Grido-CMS is a flat-file system, no database is required at all. **All t
 
 > In order for the engine, to be able to locate your contents, you need to respect some directory structures, and file naming. 
 
-The base path for placing the contents is the `/content/` directory. In the following directory structure representation you can see a hypotetical example of its contents :
+The base path for placing the contents is the `/grido-content/` directory. In the following directory structure representation you can see a hypotetical example of its contents :
 
 ```
-/content/
+/grido-content/
 ..... categories.json.js 
 ..... projects.json.js 
 ..... projects/ 
@@ -49,7 +49,7 @@ The base path for placing the contents is the `/content/` directory. In the foll
 
 Lets take a closer look to each file and directory, to understand their function and roles :
 
-> /content/categories.json.js 
+> /grido-content/categories.json.js 
 
 This mandatory file contains all the available categories structured inside an Array. This categories will be used by the filtering engine in the projects listing grid :
 ```javascript
@@ -61,7 +61,7 @@ This mandatory file contains all the available categories structured inside an A
 ]
 ```
 
-> /content/projects.json.js
+> /grido-content/projects.json.js
 
 This other mandatory file contains the collection of projects you want to be listed. Each project will be represented by a Card in the listing. Are declared using Objects, with some specific properties. A **title**, an **URI** (path to the project files), and the project **categories**, must be provided for each single entry : 
 ```javascript
@@ -79,15 +79,15 @@ This other mandatory file contains the collection of projects you want to be lis
 }
 ```
 
-> /content/projects/
+> /grido-content/projects/
 
 This directory behaves as your **projects collection container** . Must contains a nested directory for each project, and its name must match with the URIs declared in `projects.json.js`. Inside each project directory should be placed all its related material, but is expected for each project to have an **index.htm** file and a **thumbnail.jpg** file. 
 
-> /content/projects/my-project/thumbnail.jpg
+> /grido-content/projects/my-project/thumbnail.jpg
 
 A mandatory image of 300pxx300px (recomended). Is used in the cards, in the projects listing.
 
-> /content/projects/my-project/index.htm
+> /grido-content/projects/my-project/index.htm
 
 This file contains the extended contents of the project. The HTML code contained in this file will be printed in the floating panel that appears when a card is clicked. 
 
@@ -96,9 +96,9 @@ Extra files can be created  or placed here if required.
 
 # Customizing the UI ( Themes )
 
-You will find another special element inside the `/content/` directory, that has not been mentioned in the previous section :  The `/content/theme/` directory.
+You will find another special element inside the `/grido-content/` directory, that has not been mentioned in the previous section :  The `/grido-content/theme/` directory.
 
-> Any of the files inside `/content/theme/` directory can be edited and modified according to your needs. It will allow you addapt the look and feel of the interface. New files can be added, in order to expand the native features.
+> Any of the files inside `/grido-content/theme/` directory can be edited and modified according to your needs. It will allow you addapt the look and feel of the interface. New files can be added, in order to expand the native features.
 
 
 The CMS comes nativelly with a really simple theme. Its files will provide you the necessary boilerplate for custom changes. Is enought self explanatory and clear by itself, it doesn't require special attention here. 
@@ -127,8 +127,8 @@ In the following example a simple structure that exposes all them is shown. Just
         - And one more list element<br>
     </div>
     <div id="projectSecondColumn" class="simple-slider" >
-        <img src="./content/projects/my-project/img-1.jpg">
-        <img src="./content/projects/my-project/img-2.jpg">
+        <img src="./grido-content/projects/my-project/img-1.jpg">
+        <img src="./grido-content/projects/my-project/img-2.jpg">
     </div>
 </div>
 

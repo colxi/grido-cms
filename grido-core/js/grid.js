@@ -5,7 +5,6 @@ import {CSSGlobalVariables} from './lib/css-global-variables.js';
 let cssVar               = new CSSGlobalVariables();
 let __MAX_CARD_SIZE__    = Number( cssVar['card-size'] );
 
-console.log(__MAX_CARD_SIZE__);
 
 window.cssVar = cssVar;
 
